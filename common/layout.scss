@@ -1,290 +1,512 @@
-// MRGambCommunity Layout Styles - İki sütunlu tasarım
+// Stake Community Layout Styles - Sol ana içerik, sağ slider
 
 // Ana layout container
-.mrgamb-layout {
+.stake-layout {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 20px;
-  padding: 20px;
-  max-width: 1400px;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  padding: 30px;
+  max-width: 1600px;
   margin: 0 auto;
   min-height: calc(100vh - 200px);
 }
 
-// Sol sütun - Kategoriler
-.categories-column {
-  .categories-header {
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .category-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-}
-
-// Kategori kartı
-.category-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  padding: 20px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  margin-bottom: 15px;
-  
-  &:hover {
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(120, 14, 222, 0.4);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  }
-  
-  .category-content {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-  }
-  
-  .category-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    color: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+// Sol sütun - Ana içerik
+.main-content {
+  .content-section {
+    margin-bottom: 40px;
     
-    &.staff {
-      background: linear-gradient(135deg, #9a2ff0, #780ede);
-    }
-    
-    &.general {
-      background: linear-gradient(135deg, #3742fa, #2f3fd8);
-    }
-    
-    &.casino {
-      background: linear-gradient(135deg, #ffa502, #ff8c00);
-    }
-    
-    &.sports {
-      background: linear-gradient(135deg, #2ed573, #26d066);
-    }
-    
-    &.local {
-      background: linear-gradient(135deg, #00d4ff, #00b8e6);
-    }
-  }
-  
-  .category-info {
-    flex: 1;
-    
-    .category-name {
+    .section-header {
       color: white;
-      font-size: 18px;
+      font-size: 24px;
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
-    
-    .category-description {
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 15px;
-      line-height: 1.5;
-      font-weight: 400;
-    }
-  }
-  
-  .category-stats {
-    color: white;
-    font-size: 16px;
-    font-weight: 700;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 8px 12px;
-    border-radius: 8px;
-    min-width: 30px;
-    text-align: center;
   }
 }
 
-// Sağ sütun - Konular
-.topics-column {
-  .topics-header {
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
+// Recent Discussions Section
+.recent-discussions {
+  .discussion-item {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 20px;
     margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .topic-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(0, 191, 255, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    }
+    
+    .discussion-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .discussion-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: white;
+      background: linear-gradient(135deg, #00bfff, #0099cc);
+      box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+    }
+    
+    .discussion-info {
+      flex: 1;
+      
+      .discussion-title {
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        line-height: 1.4;
+      }
+      
+      .discussion-meta {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+      }
+    }
+    
+    .discussion-stats {
+      text-align: right;
+      
+      .stats-numbers {
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      
+      .stats-time {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 12px;
+      }
+    }
   }
 }
 
-// Konu kartı
-.topic-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  padding: 20px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  margin-bottom: 15px;
-  
-  &:hover {
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(120, 14, 222, 0.4);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  }
-  
-  .topic-content {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-  }
-  
-  .topic-avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 18px;
-    color: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+// Promotions Section
+.promotions-section {
+  .promotion-category {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
     
-    &.blue {
-      background: linear-gradient(135deg, #3742fa, #2f3fd8);
+    &:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 165, 2, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
     }
     
-    &.purple {
-      background: linear-gradient(135deg, #9a2ff0, #780ede);
+    .promotion-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
     }
     
-    &.yellow {
-      background: linear-gradient(135deg, #ffa502, #ff8c00);
-    }
-    
-    &.orange {
-      background: linear-gradient(135deg, #ff6b6b, #ff4757);
-    }
-    
-    &.green {
-      background: linear-gradient(135deg, #2ed573, #26d066);
-    }
-    
-    &.cyan {
-      background: linear-gradient(135deg, #00d4ff, #00b8e6);
-    }
-  }
-  
-  .topic-info {
-    flex: 1;
-    
-    .topic-title {
+    .promotion-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
       color: white;
-      font-size: 17px;
-      font-weight: 600;
-      margin-bottom: 8px;
-      line-height: 1.5;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      
+      &.casino {
+        background: linear-gradient(135deg, #ffa502, #ff8c00);
+      }
+      
+      &.sportsbook {
+        background: linear-gradient(135deg, #2ed573, #26d066);
+      }
+      
+      &.community {
+        background: linear-gradient(135deg, #ff6b6b, #ff4757);
+      }
+      
+      &.results {
+        background: linear-gradient(135deg, #9a2ff0, #780ede);
+      }
+      
+      &.seasonal {
+        background: linear-gradient(135deg, #00d4ff, #00b8e6);
+      }
     }
     
-    .topic-meta {
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 15px;
-      font-weight: 400;
+    .promotion-info {
+      flex: 1;
+      
+      .promotion-title {
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      
+      .promotion-description {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        line-height: 1.4;
+      }
     }
-  }
-  
-  .topic-stats {
-    text-align: right;
     
-    .topic-count {
+    .promotion-stats {
       color: white;
       font-size: 16px;
       font-weight: 700;
-      margin-bottom: 8px;
       background: rgba(255, 255, 255, 0.1);
-      padding: 6px 10px;
-      border-radius: 6px;
-      display: inline-block;
-    }
-    
-    .topic-time {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 13px;
-      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 8px;
     }
   }
 }
 
-// Responsive tasarım
-@media (max-width: 1024px) {
-  .mrgamb-layout {
-    grid-template-columns: 1fr;
-    gap: 15px;
+// Forum Categories Section
+.forum-categories {
+  .category-item {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(46, 213, 115, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    }
+    
+    .category-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .category-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: white;
+      
+      &.casino {
+        background: linear-gradient(135deg, #ffa502, #ff8c00);
+      }
+      
+      &.sportsbook {
+        background: linear-gradient(135deg, #2ed573, #26d066);
+      }
+      
+      &.poker {
+        background: linear-gradient(135deg, #ff6b6b, #ff4757);
+      }
+      
+      &.suggestions {
+        background: linear-gradient(135deg, #9a2ff0, #780ede);
+      }
+      
+      &.support {
+        background: linear-gradient(135deg, #00d4ff, #00b8e6);
+      }
+      
+      &.originals {
+        background: linear-gradient(135deg, #ff9ff3, #f368e0);
+      }
+    }
+    
+    .category-info {
+      flex: 1;
+      
+      .category-title {
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      
+      .category-description {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        line-height: 1.4;
+      }
+    }
+    
+    .category-stats {
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+  }
+}
+
+// Sağ sütun - Slider/Banner alanı
+.sidebar-slider {
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+  
+  .slider-container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .slider-item {
+    position: relative;
+    height: 300px;
+    background: linear-gradient(135deg, #1a2b3c, #2a3b4c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    
+    &.active {
+      animation: slideIn 0.5s ease-in-out;
+    }
+    
+    .slider-content {
+      .slider-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      
+      .slider-description {
+        font-size: 14px;
+        opacity: 0.8;
+        margin-bottom: 15px;
+      }
+      
+      .slider-button {
+        background: linear-gradient(135deg, #00bfff, #0099cc);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 191, 255, 0.4);
+        }
+      }
+    }
+  }
+  
+  .slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
     padding: 15px;
+    
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      
+      &.active {
+        background: #00bfff;
+        transform: scale(1.2);
+      }
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}
+
+// Forum Statistics
+.forum-statistics {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  
+  .stats-header {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
   }
   
-  .categories-column {
-    order: 2;
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    
+    .stat-item {
+      text-align: center;
+      
+      .stat-number {
+        font-size: 20px;
+        font-weight: 700;
+        color: #00bfff;
+        display: block;
+      }
+      
+      .stat-label {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 12px;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+// Member Statistics
+.member-statistics {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+  
+  .member-header {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
   }
   
-  .topics-column {
-    order: 1;
+  .member-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    
+    .member-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2ed573, #26d066);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    
+    .member-details {
+      .member-name {
+        color: white;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      
+      .member-joined {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 12px;
+      }
+    }
+  }
+  
+  .member-stats {
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      
+      .stat-label {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+      }
+      
+      .stat-value {
+        color: white;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Responsive Design
+@media (max-width: 1200px) {
+  .stake-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .sidebar-slider {
+    position: static;
+    order: -1;
   }
 }
 
 @media (max-width: 768px) {
-  .mrgamb-layout {
-    padding: 10px;
+  .stake-layout {
+    padding: 15px;
   }
   
-  .category-card,
-  .topic-card {
-    padding: 12px;
-  }
-  
-  .category-content,
-  .topic-content {
-    gap: 12px;
-  }
-  
-  .category-icon {
-    width: 40px;
-    height: 40px;
+  .main-content .content-section .section-header {
     font-size: 20px;
   }
   
-  .topic-avatar {
-    width: 35px;
-    height: 35px;
-    font-size: 14px;
+  .recent-discussions .discussion-item,
+  .promotions-section .promotion-category,
+  .forum-categories .category-item {
+    padding: 15px;
   }
   
-  .category-name,
-  .topic-title {
-    font-size: 15px;
-  }
-  
-  .category-description,
-  .topic-meta {
-    font-size: 13px;
+  .slider-item {
+    height: 250px;
   }
 } 

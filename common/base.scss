@@ -48,6 +48,11 @@ body {
   display: none; // Varsayılan category list'i gizle
 }
 
+// Stake layout'u için ek gizleme
+.mrgamb-layout {
+  display: none; // Eski layout'u gizle
+}
+
 // Navigation
 .nav-pills {
   .nav-link {
