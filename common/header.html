@@ -1,56 +1,44 @@
-{{#if siteSettings.enable_experimental_hamburger_menu}}
-  {{hamburger-menu}}
-{{else}}
-  <div class="header-buttons">
-    {{#if showSidebar}}
-      {{sidebar-toggle action="toggleSidebar"}}
-    {{/if}}
-    {{#if showTop}}
-      {{top-toggle action="toggleTop"}}
-    {{/if}}
-  </div>
-{{/if}}
-
-<div class="header-links-wrapper">
-  {{#if showHeaderLinks}}
-    {{header-links}}
-  {{/if}}
-</div>
-
-<div class="logo-wrapper">
-  {{#if showLogo}}
-    <a href="{{homepageUrl}}">
-      <div class="title">
-        {{#if siteSettings.logo_url}}
-          <img src="{{siteSettings.logo_url}}" alt="{{siteSettings.title}}" id="site-logo">
-        {{else}}
-          {{siteSettings.title}}
-        {{/if}}
+<!-- MRGambCommunity Header -->
+<div class="mrgamb-header">
+  <div class="header-top">
+    <div class="header-left">
+      <div class="logo">
+        <span class="logo-icon">👑</span>
+        <span class="logo-text">MRGAMB COMMUNITY</span>
       </div>
-    </a>
-  {{/if}}
-</div>
-
-<div class="header-buttons">
-  {{#if showSearch}}
-    {{search-menu}}
-  {{/if}}
+    </div>
+    <div class="header-right">
+      <div class="header-icons">
+        <div class="icon search-icon">🔍</div>
+        <div class="icon notification-icon">🔔</div>
+        <div class="icon user-icon">👤</div>
+        <div class="icon menu-icon">☰</div>
+      </div>
+    </div>
+  </div>
   
-  {{#if showNotifications}}
-    {{notifications-menu}}
-  {{/if}}
+  <!-- Search Bar -->
+  <div class="search-container">
+    <div class="search-bar">
+      <div class="search-icon">🔍</div>
+      <input type="text" placeholder="Tekrar hoş geldin, Zacoe!" class="search-input">
+    </div>
+  </div>
   
-  {{#if showUserMenu}}
-    {{user-menu}}
-  {{/if}}
-</div>
-
-<!-- Stake Community özel navigasyon -->
-<div class="stake-nav-container">
-  <nav class="stake-nav">
-    <a href="/" class="nav-item {{#if isHome}}active{{/if}}">Forum</a>
-    <a href="/casino" class="nav-item">Casino</a>
-    <a href="/sportsbook" class="nav-item">Sportsbook</a>
-    <a href="/blog" class="nav-item">Blog</a>
-  </nav>
+  <!-- Navigation Bar -->
+  <div class="nav-container">
+    <div class="nav-tabs">
+      <div class="nav-tab active">Kategoriler</div>
+      <div class="nav-tab">Konular</div>
+      <div class="nav-tab">En son</div>
+      <div class="nav-tab">Yeni <span class="badge">1</span></div>
+      <div class="nav-tab">Popüler</div>
+    </div>
+    <div class="nav-actions">
+      <button class="new-topic-btn">
+        <span class="plus-icon">+</span>
+        Yeni Konu
+      </button>
+    </div>
+  </div>
 </div> 

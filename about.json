@@ -1,6 +1,6 @@
 {
-  "name": "Stake Community Theme",
-  "about": "A dark-themed Discourse theme inspired by Stake Community design with modern gaming aesthetics",
+  "name": "MRGambCommunity Theme",
+  "about": "A dark-themed Discourse theme inspired by MRGambCommunity design with modern gaming aesthetics",
   "license": "MIT",
   "version": "1.0.0",
   "authors": "Aendir",
@@ -8,13 +8,24 @@
   "minimum_discourse_version": "2.7.0",
   "maximum_discourse_version": null,
   "assets": {
-    "stake-logo": "assets/stake-logo.png",
+    "mrgamb-logo": "assets/mrgamb-logo.png",
     "slot-machine": "assets/slot-machine.png",
     "fighter-celebration": "assets/fighter-celebration.png",
     "gold-coins": "assets/gold-coins.png"
   },
+  "common": {
+    "header": "common/header.html",
+    "header_scss": "common/header.scss",
+    "base_scss": "common/base.scss",
+    "components_scss": "common/components.scss",
+    "layout": "common/layout.html",
+    "layout_scss": "common/layout.scss"
+  },
+  "javascripts": [
+    "common/header.js"
+  ],
   "color_schemes": {
-    "Stake Purple": {
+    "MRGambCommunity Purple": {
       "primary": "780EDE",
       "secondary": "1A1A2E",
       "tertiary": "9A2FF0",
@@ -31,5 +42,5 @@
   "modifiers": {
     "serialize_topic_excerpts": true
   },
-  "learn_more": "https://github.com/yourusername/stake-community-theme"
+  "learn_more": "https://github.com/yourusername/mrgambcommunity-theme"
 } 

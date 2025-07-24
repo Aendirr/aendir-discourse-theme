@@ -1,116 +1,216 @@
-// Stake Community Header Styles - Purple Theme
-.d-header {
+// MRGambCommunity Header Styles - Görüntüdeki tasarıma uygun
+
+// Ana header container
+.mrgamb-header {
   background: #780ede;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  
-  .header-buttons {
-    .btn {
-      border-radius: 6px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      
-      &.btn-primary {
-        background: #9a2ff0;
-        border: 2px solid #9a2ff0;
-        color: white;
-        
-        &:hover {
-          background: #b44ff8;
-          border-color: #b44ff8;
-          transform: translateY(-1px);
-        }
-      }
-      
-      &.btn-flat {
-        color: white;
-        
-        &:hover {
-          background: rgba(255, 255, 255, 0.1);
-          color: #9a2ff0;
-        }
-      }
-    }
-  }
-  
-  .header-links-wrapper {
-    .header-link {
-      color: white;
-      font-weight: 500;
-      padding: 8px 16px;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-      
-      &:hover {
-        background: rgba(255, 255, 255, 0.1);
-        color: #9a2ff0;
-      }
-      
-      &.active {
-        background: #9a2ff0;
-        color: white;
-      }
-    }
-  }
-  
-  .logo-wrapper {
-    .title {
+}
+
+// Üst header bölümü
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+// Logo bölümü
+.header-left {
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    .logo-icon {
       font-size: 24px;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    }
+    
+    .logo-text {
+      font-size: 20px;
       font-weight: bold;
-      color: white;
-      
-      &:before {
-        content: "💎";
-        margin-right: 8px;
-      }
+      letter-spacing: 1px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
   }
-  
-  .icons {
+}
+
+// Sağ taraftaki ikonlar
+.header-right {
+  .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
     .icon {
-      color: white;
-      font-size: 18px;
-      padding: 8px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 50%;
+      cursor: pointer;
       transition: all 0.3s ease;
+      font-size: 18px;
       
       &:hover {
-        background: rgba(255, 255, 255, 0.1);
-        color: #9a2ff0;
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.1);
       }
     }
   }
 }
 
-// Search bar styling
-.search-menu {
-  .search-input {
+// Arama çubuğu
+.search-container {
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 6px;
-    color: white;
+    border-radius: 8px;
+    padding: 12px 15px;
+    max-width: 600px;
+    margin: 0 auto;
     
-    &:focus {
-      border-color: #9a2ff0;
-      box-shadow: 0 0 0 2px rgba(154, 47, 240, 0.2);
+    .search-icon {
+      font-size: 18px;
+      margin-right: 12px;
+      color: rgba(255, 255, 255, 0.7);
     }
     
-    &::placeholder {
-      color: rgba(255, 255, 255, 0.6);
+    .search-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 16px;
+      outline: none;
+      
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
     }
   }
 }
 
-// User menu styling
-.user-menu {
-  .user-menu-button {
-    border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+// Navigasyon çubuğu
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+// Navigasyon sekmeleri
+.nav-tabs {
+  display: flex;
+  gap: 5px;
+  
+  .nav-tab {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    &.active {
+      background: white;
+      color: #780ede;
+      font-weight: 600;
+    }
+    
+    .badge {
+      background: #ff4757;
+      color: white;
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 10px;
+      margin-left: 5px;
+      font-weight: bold;
+    }
+  }
+}
+
+// Sağ taraftaki aksiyonlar
+.nav-actions {
+  .new-topic-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #9a2ff0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
     transition: all 0.3s ease;
     
     &:hover {
-      border-color: #9a2ff0;
-      transform: scale(1.05);
+      background: #b44ff8;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(154, 47, 240, 0.4);
+    }
+    
+    .plus-icon {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}
+
+// Responsive tasarım
+@media (max-width: 768px) {
+  .header-top {
+    padding: 10px 15px;
+    
+    .logo .logo-text {
+      font-size: 16px;
+    }
+  }
+  
+  .search-container {
+    padding: 10px 15px;
+  }
+  
+  .nav-container {
+    padding: 10px 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .nav-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    .nav-tab {
+      padding: 8px 15px;
+      font-size: 14px;
+    }
+  }
+  
+  .header-icons {
+    gap: 10px !important;
+    
+    .icon {
+      width: 35px !important;
+      height: 35px !important;
+      font-size: 16px !important;
     }
   }
 } 

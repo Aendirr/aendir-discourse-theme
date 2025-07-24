@@ -1,6 +1,6 @@
-# Stake Community Theme
+# MRGambCommunity Theme
 
-Stake Community sitesinin tasarımını birebir taklit eden modern ve şık bir Discourse teması.
+MRGambCommunity sitesinin tasarımını birebir taklit eden modern ve şık bir Discourse teması.
 
 ## 🎨 Tasarım Özellikleri
 
@@ -18,7 +18,7 @@ Stake Community sitesinin tasarımını birebir taklit eden modern ve şık bir 
 2. Discourse admin panelinde "Themes & components" bölümüne gidin
 3. "Upload" butonuna tıklayın
 4. "From Git repository" sekmesini seçin
-5. Repository URL'sini girin: `https://github.com/kullaniciadi/stake-community-theme`
+5. Repository URL'sini girin: `https://github.com/aendirr/aendir-discourse-theme`
 6. "Upload" butonuna tıklayın
 
 ### 2. Manuel Kurulum
@@ -32,14 +32,14 @@ Stake Community sitesinin tasarımını birebir taklit eden modern ve şık bir 
 ## 📁 Dosya Yapısı
 
 ```
-stake-community-theme/
+mrgambcommunity-theme/
 ├── about.json              # Tema bilgileri ve ayarları
 ├── common/
 │   ├── base.scss           # Temel stiller
 │   ├── header.scss         # Header tasarımı
 │   └── components.scss     # Özel bileşenler
 ├── assets/
-│   ├── stake-logo.png      # Stake logosu
+│   ├── mrgamb-logo.png     # MRGambCommunity logosu
 │   ├── slot-machine.png    # Slot makinesi görseli
 │   ├── fighter-celebration.png # Sporcu görseli
 │   └── gold-coins.png      # Altın paralar görseli
@@ -59,7 +59,7 @@ stake-community-theme/
 - **Promosyon Bannerları**: Gradient arka planlı modern bannerlar
 - **İstatistik Kartları**: Forum ve üye istatistikleri
 - **Kategori İkonları**: Renkli kategori simgeleri
-- **Özel Navigasyon**: Stake tarzı navigasyon menüsü
+- **Özel Navigasyon**: MRGambCommunity tarzı navigasyon menüsü
 
 ### Responsive Tasarım
 - Mobil cihazlarda optimize edilmiş görünüm
@@ -73,9 +73,9 @@ stake-community-theme/
 
 ```scss
 :root {
-  --stake-primary: #780ede;
-  --stake-primary-light: #9a2ff0;
-  --stake-secondary: #1a1a2e;
+  --mrgamb-primary: #780ede;
+  --mrgamb-primary-light: #9a2ff0;
+  --mrgamb-secondary: #1a1a2e;
   // ... diğer renkler
 }
 ```
@@ -89,7 +89,7 @@ stake-community-theme/
 - ✅ Responsive tasarım
 - ✅ Modern UI bileşenleri
 - ✅ Özel renk paleti
-- ✅ Stake Community tasarım dili
+- ✅ MRGambCommunity tasarım dili
 - ✅ Mobil uyumlu
 - ✅ Hızlı yükleme
 - ✅ SEO dostu
@@ -124,15 +124,15 @@ Bu tema MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosya
 
 ## 🙏 Teşekkürler
 
-- [Stake Community](https://stakecommunity.com) - Tasarım ilhamı için
+- [MRGambCommunity](https://mrgambcommunity.com) - Tasarım ilhamı için
 - [Discourse](https://discourse.org) - Harika forum platformu için
 
 ## 📞 İletişim
 
 Sorularınız veya önerileriniz için:
-- GitHub Issues: [Repository Issues](https://github.com/kullaniciadi/stake-community-theme/issues)
+- GitHub Issues: [Repository Issues](https://github.com/kullaniciadi/mrgambcommunity-theme/issues)
 - Email: your-email@example.com
 
 ---
 
-**Not**: Bu tema Stake Community sitesinin tasarımını taklit etmek için oluşturulmuştur. Ticari kullanım için gerekli izinleri aldığınızdan emin olun. 
+**Not**: Bu tema MRGambCommunity sitesinin tasarımını taklit etmek için oluşturulmuştur. Ticari kullanım için gerekli izinleri aldığınızdan emin olun. 

@@ -1,7 +1,7 @@
-// Stake Community Custom Components
+// MRGambCommunity Custom Components
 
 // Promotional Banner Component
-.stake-promo-banner {
+.mrgamb-promo-banner {
   background: linear-gradient(135deg, #780ede, #9a2ff0);
   border-radius: 12px;
   padding: 20px;
@@ -16,7 +16,7 @@
     right: 0;
     width: 100px;
     height: 100px;
-    background: url($stake-logo) no-repeat center;
+    background: url($mrgamb-logo) no-repeat center;
     background-size: contain;
     opacity: 0.1;
   }
@@ -59,7 +59,7 @@
 }
 
 // Forum Statistics Component
-.stake-forum-stats {
+.mrgamb-forum-stats {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
@@ -99,7 +99,7 @@
 }
 
 // Member Statistics Component
-.stake-member-stats {
+.mrgamb-member-stats {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
@@ -226,7 +226,7 @@
 }
 
 // Custom Navigation
-.stake-nav {
+.mrgamb-nav {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
@@ -255,7 +255,7 @@
 }
 
 // Loading Animation
-.stake-loading {
+.mrgamb-loading {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -278,11 +278,11 @@
 
 // Responsive Design
 @media (max-width: 768px) {
-  .stake-forum-stats .stats-grid {
+  .mrgamb-forum-stats .stats-grid {
     grid-template-columns: 1fr;
   }
   
-  .stake-nav {
+  .mrgamb-nav {
     flex-direction: column;
     
     .nav-item {
@@ -290,7 +290,7 @@
     }
   }
   
-  .stake-promo-banner {
+  .mrgamb-promo-banner {
     padding: 15px;
     
     .banner-content .banner-title {

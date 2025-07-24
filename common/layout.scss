@@ -1,0 +1,264 @@
+// MRGambCommunity Layout Styles - İki sütunlu tasarım
+
+// Ana layout container
+.mrgamb-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: calc(100vh - 200px);
+}
+
+// Sol sütun - Kategoriler
+.categories-column {
+  .categories-header {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+// Kategori kartı
+.category-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(120, 14, 222, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .category-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .category-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    
+    &.staff {
+      background: #ff4757;
+    }
+    
+    &.general {
+      background: #3742fa;
+    }
+    
+    &.casino {
+      background: #ffa502;
+    }
+    
+    &.sports {
+      background: #2ed573;
+    }
+    
+    &.local {
+      background: #00d4ff;
+    }
+  }
+  
+  .category-info {
+    flex: 1;
+    
+    .category-name {
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    
+    .category-description {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+  
+  .category-stats {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+// Sağ sütun - Konular
+.topics-column {
+  .topics-header {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .topic-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+// Konu kartı
+.topic-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(120, 14, 222, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .topic-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .topic-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    
+    &.blue {
+      background: #3742fa;
+    }
+    
+    &.purple {
+      background: #9a2ff0;
+    }
+    
+    &.yellow {
+      background: #ffa502;
+    }
+    
+    &.orange {
+      background: #ff6b6b;
+    }
+  }
+  
+  .topic-info {
+    flex: 1;
+    
+    .topic-title {
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 5px;
+      line-height: 1.4;
+    }
+    
+    .topic-meta {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 14px;
+    }
+  }
+  
+  .topic-stats {
+    text-align: right;
+    
+    .topic-count {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    
+    .topic-time {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 12px;
+    }
+  }
+}
+
+// Responsive tasarım
+@media (max-width: 1024px) {
+  .mrgamb-layout {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .categories-column {
+    order: 2;
+  }
+  
+  .topics-column {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .mrgamb-layout {
+    padding: 10px;
+  }
+  
+  .category-card,
+  .topic-card {
+    padding: 12px;
+  }
+  
+  .category-content,
+  .topic-content {
+    gap: 12px;
+  }
+  
+  .category-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .topic-avatar {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+  
+  .category-name,
+  .topic-title {
+    font-size: 15px;
+  }
+  
+  .category-description,
+  .topic-meta {
+    font-size: 13px;
+  }
+} 
