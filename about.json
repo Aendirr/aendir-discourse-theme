@@ -1,6 +1,6 @@
 {
-  "name": "MRGambCommunity Theme",
-  "about": "A dark-themed Discourse theme inspired by MRGambCommunity design with modern gaming aesthetics",
+  "name": "Stake Community Theme",
+  "about": "A dark-themed Discourse theme inspired by Stake Community design with modern gaming aesthetics",
   "license": "MIT",
   "version": "1.0.0",
   "authors": "Aendir",
@@ -42,5 +42,5 @@
   "modifiers": {
     "serialize_topic_excerpts": true
   },
-  "learn_more": "https://github.com/yourusername/mrgambcommunity-theme"
+  "learn_more": "https://github.com/aendirr/aendir-discourse-theme"
 } 

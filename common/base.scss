@@ -35,6 +35,47 @@ body {
   display: none !important;
 }
 
+// Eski MRGambCommunity header'ını da gizle
+.mrgamb-header {
+  display: none !important;
+}
+
+// Tüm eski header elementlerini gizle
+.mrgamb-header,
+.header-top,
+.search-container,
+.nav-container,
+.header-left,
+.header-right,
+.header-icons,
+.icon,
+.logo,
+.logo-icon,
+.logo-text,
+.search-bar,
+.search-input,
+.nav-tabs,
+.nav-tab,
+.nav-actions,
+.new-topic-btn {
+  display: none !important;
+}
+
+// Eski layout'u da gizle
+.mrgamb-layout {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+// Tüm eski elementleri gizle
+.mrgamb-header *,
+.mrgamb-layout * {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
 // Ana içerik alanını düzenle
 .list-controls {
   display: none; // Varsayılan kontrolleri gizle

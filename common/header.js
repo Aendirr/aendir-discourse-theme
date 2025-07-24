@@ -1,27 +1,67 @@
 // Stake Community Header JavaScript
 // Header'ı sayfaya ekle ve Discourse'un varsayılan header'ını gizle
 
-import { withPluginApi } from "discourse/lib/plugin-api";
-
 export default {
   name: "stake-header",
   
   initialize() {
-    withPluginApi("0.8.31", api => {
-      // Sayfa yüklendiğinde header'ı ekle
-      api.onPageChange(() => {
-        this.addCustomHeader();
-      });
+    // Sayfa yüklendiğinde header'ı ekle
+    setTimeout(() => {
+      this.addCustomHeader();
+    }, 100);
+    
+    // DOM değişikliklerini izle
+    const observer = new MutationObserver(() => {
+      // Eski header'ları gizle
+      this.hideOldHeaders();
       
-      // İlk yüklemede de header'ı ekle
+      if (!document.querySelector('.stake-header')) {
+        this.addCustomHeader();
+      }
+    });
+    
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+    
+    // Sayfa yüklendiğinde de eski header'ları gizle
+    window.addEventListener('load', () => {
+      this.hideOldHeaders();
       this.addCustomHeader();
     });
+  },
+  
+  hideOldHeaders() {
+    // Tüm eski header elementlerini gizle
+    const oldHeaders = document.querySelectorAll('.mrgamb-header, .d-header, .header-top, .search-container, .nav-container, .header-left, .header-right, .header-icons, .icon, .logo, .logo-icon, .logo-text, .search-bar, .search-input, .nav-tabs, .nav-tab, .nav-actions, .new-topic-btn');
+    oldHeaders.forEach(header => {
+      header.style.display = 'none';
+      header.style.visibility = 'hidden';
+      header.style.opacity = '0';
+    });
+    
+    // Eski layout'u da gizle
+    const oldLayout = document.querySelector('.mrgamb-layout');
+    if (oldLayout) {
+      oldLayout.style.display = 'none';
+      oldLayout.style.visibility = 'hidden';
+    }
   },
   
   addCustomHeader() {
     // Eğer header zaten varsa ekleme
     if (document.querySelector('.stake-header')) {
       return;
+    }
+    
+    // Önce tüm eski header'ları gizle
+    this.hideOldHeaders();
+    
+    // Discourse'un varsayılan header'ını gizle
+    const defaultHeader = document.querySelector('.d-header');
+    if (defaultHeader) {
+      defaultHeader.style.display = 'none';
     }
     
     // Header HTML'ini oluştur
@@ -76,6 +116,12 @@ export default {
     // Ana içerik alanını bul
     const mainContent = document.querySelector('#main-outlet') || document.querySelector('.container');
     if (!mainContent) return;
+    
+    // Discourse'un varsayılan içeriğini gizle
+    const defaultContent = mainContent.querySelector('.list-controls, .topic-list, .category-list');
+    if (defaultContent) {
+      defaultContent.style.display = 'none';
+    }
     
     // Layout HTML'ini oluştur
     const layoutHTML = `
@@ -370,6 +416,8 @@ export default {
     const dots = document.querySelectorAll('.dot');
     let currentSlide = 0;
     
+    if (slides.length === 0) return;
+    
     // Slider'ı otomatik olarak değiştir
     setInterval(() => {
       currentSlide = (currentSlide + 1) % slides.length;
@@ -389,6 +437,8 @@ export default {
     const slides = document.querySelectorAll('.slider-item');
     const dots = document.querySelectorAll('.dot');
     
+    if (slides.length === 0) return;
+    
     // Tüm slide'ları gizle
     slides.forEach(slide => {
       slide.classList.remove('active');
@@ -400,8 +450,12 @@ export default {
     });
     
     // Aktif slide'ı göster
-    slides[index].classList.add('active');
-    dots[index].classList.add('active');
+    if (slides[index]) {
+      slides[index].classList.add('active');
+    }
+    if (dots[index]) {
+      dots[index].classList.add('active');
+    }
   },
   
   addEventListeners() {
