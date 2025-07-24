@@ -1,0 +1,56 @@
+{{#if siteSettings.enable_experimental_hamburger_menu}}
+  {{hamburger-menu}}
+{{else}}
+  <div class="header-buttons">
+    {{#if showSidebar}}
+      {{sidebar-toggle action="toggleSidebar"}}
+    {{/if}}
+    {{#if showTop}}
+      {{top-toggle action="toggleTop"}}
+    {{/if}}
+  </div>
+{{/if}}
+
+<div class="header-links-wrapper">
+  {{#if showHeaderLinks}}
+    {{header-links}}
+  {{/if}}
+</div>
+
+<div class="logo-wrapper">
+  {{#if showLogo}}
+    <a href="{{homepageUrl}}">
+      <div class="title">
+        {{#if siteSettings.logo_url}}
+          <img src="{{siteSettings.logo_url}}" alt="{{siteSettings.title}}" id="site-logo">
+        {{else}}
+          {{siteSettings.title}}
+        {{/if}}
+      </div>
+    </a>
+  {{/if}}
+</div>
+
+<div class="header-buttons">
+  {{#if showSearch}}
+    {{search-menu}}
+  {{/if}}
+  
+  {{#if showNotifications}}
+    {{notifications-menu}}
+  {{/if}}
+  
+  {{#if showUserMenu}}
+    {{user-menu}}
+  {{/if}}
+</div>
+
+<!-- Stake Community özel navigasyon -->
+<div class="stake-nav-container">
+  <nav class="stake-nav">
+    <a href="/" class="nav-item {{#if isHome}}active{{/if}}">Forum</a>
+    <a href="/casino" class="nav-item">Casino</a>
+    <a href="/sportsbook" class="nav-item">Sportsbook</a>
+    <a href="/blog" class="nav-item">Blog</a>
+  </nav>
+</div> 

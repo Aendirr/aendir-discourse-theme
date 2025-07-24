@@ -1,0 +1,116 @@
+// Stake Community Header Styles - Purple Theme
+.d-header {
+  background: #780ede;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  
+  .header-buttons {
+    .btn {
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      
+      &.btn-primary {
+        background: #9a2ff0;
+        border: 2px solid #9a2ff0;
+        color: white;
+        
+        &:hover {
+          background: #b44ff8;
+          border-color: #b44ff8;
+          transform: translateY(-1px);
+        }
+      }
+      
+      &.btn-flat {
+        color: white;
+        
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+          color: #9a2ff0;
+        }
+      }
+    }
+  }
+  
+  .header-links-wrapper {
+    .header-link {
+      color: white;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #9a2ff0;
+      }
+      
+      &.active {
+        background: #9a2ff0;
+        color: white;
+      }
+    }
+  }
+  
+  .logo-wrapper {
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      
+      &:before {
+        content: "💎";
+        margin-right: 8px;
+      }
+    }
+  }
+  
+  .icons {
+    .icon {
+      color: white;
+      font-size: 18px;
+      padding: 8px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #9a2ff0;
+      }
+    }
+  }
+}
+
+// Search bar styling
+.search-menu {
+  .search-input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: white;
+    
+    &:focus {
+      border-color: #9a2ff0;
+      box-shadow: 0 0 0 2px rgba(154, 47, 240, 0.2);
+    }
+    
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+// User menu styling
+.user-menu {
+  .user-menu-button {
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      border-color: #9a2ff0;
+      transform: scale(1.05);
+    }
+  }
+} 

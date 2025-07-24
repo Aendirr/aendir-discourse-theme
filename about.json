@@ -1,0 +1,35 @@
+{
+  "name": "Stake Community Theme",
+  "about": "A dark-themed Discourse theme inspired by Stake Community design with modern gaming aesthetics",
+  "license": "MIT",
+  "version": "1.0.0",
+  "authors": "Aendir",
+  "theme_version": 2,
+  "minimum_discourse_version": "2.7.0",
+  "maximum_discourse_version": null,
+  "assets": {
+    "stake-logo": "assets/stake-logo.png",
+    "slot-machine": "assets/slot-machine.png",
+    "fighter-celebration": "assets/fighter-celebration.png",
+    "gold-coins": "assets/gold-coins.png"
+  },
+  "color_schemes": {
+    "Stake Purple": {
+      "primary": "780EDE",
+      "secondary": "1A1A2E",
+      "tertiary": "9A2FF0",
+      "quaternary": "B44FF8",
+      "header_background": "780EDE",
+      "header_primary": "FFFFFF",
+      "highlight": "9A2FF0",
+      "love": "FF6B6B",
+      "danger": "FF4757",
+      "success": "2ED573",
+      "warning": "FFA502"
+    }
+  },
+  "modifiers": {
+    "serialize_topic_excerpts": true
+  },
+  "learn_more": "https://github.com/yourusername/stake-community-theme"
+} 
