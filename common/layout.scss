@@ -31,54 +31,56 @@
 
 // Kategori kartı
 .category-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 20px;
   transition: all 0.3s ease;
   cursor: pointer;
+  margin-bottom: 15px;
   
   &:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(120, 14, 222, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(120, 14, 222, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
   }
   
   .category-content {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 18px;
   }
   
   .category-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 28px;
     color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     
     &.staff {
-      background: #ff4757;
+      background: linear-gradient(135deg, #9a2ff0, #780ede);
     }
     
     &.general {
-      background: #3742fa;
+      background: linear-gradient(135deg, #3742fa, #2f3fd8);
     }
     
     &.casino {
-      background: #ffa502;
+      background: linear-gradient(135deg, #ffa502, #ff8c00);
     }
     
     &.sports {
-      background: #2ed573;
+      background: linear-gradient(135deg, #2ed573, #26d066);
     }
     
     &.local {
-      background: #00d4ff;
+      background: linear-gradient(135deg, #00d4ff, #00b8e6);
     }
   }
   
@@ -87,22 +89,29 @@
     
     .category-name {
       color: white;
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 5px;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
     
     .category-description {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 14px;
-      line-height: 1.4;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 15px;
+      line-height: 1.5;
+      font-weight: 400;
     }
   }
   
   .category-stats {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
-    font-weight: 500;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+    min-width: 30px;
+    text-align: center;
   }
 }
 
@@ -126,51 +135,61 @@
 
 // Konu kartı
 .topic-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 20px;
   transition: all 0.3s ease;
   cursor: pointer;
+  margin-bottom: 15px;
   
   &:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(120, 14, 222, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(120, 14, 222, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
   }
   
   .topic-content {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 18px;
   }
   
   .topic-avatar {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     
     &.blue {
-      background: #3742fa;
+      background: linear-gradient(135deg, #3742fa, #2f3fd8);
     }
     
     &.purple {
-      background: #9a2ff0;
+      background: linear-gradient(135deg, #9a2ff0, #780ede);
     }
     
     &.yellow {
-      background: #ffa502;
+      background: linear-gradient(135deg, #ffa502, #ff8c00);
     }
     
     &.orange {
-      background: #ff6b6b;
+      background: linear-gradient(135deg, #ff6b6b, #ff4757);
+    }
+    
+    &.green {
+      background: linear-gradient(135deg, #2ed573, #26d066);
+    }
+    
+    &.cyan {
+      background: linear-gradient(135deg, #00d4ff, #00b8e6);
     }
   }
   
@@ -179,15 +198,17 @@
     
     .topic-title {
       color: white;
-      font-size: 16px;
-      font-weight: 500;
-      margin-bottom: 5px;
-      line-height: 1.4;
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      line-height: 1.5;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
     
     .topic-meta {
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 14px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 15px;
+      font-weight: 400;
     }
   }
   
@@ -195,15 +216,20 @@
     text-align: right;
     
     .topic-count {
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 14px;
-      font-weight: 500;
-      margin-bottom: 5px;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 6px 10px;
+      border-radius: 6px;
+      display: inline-block;
     }
     
     .topic-time {
-      color: rgba(255, 255, 255, 0.5);
-      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 13px;
+      font-weight: 500;
     }
   }
 }

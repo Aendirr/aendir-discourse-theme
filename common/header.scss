@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 20px 25px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -29,9 +29,9 @@
     }
     
     .logo-text {
-      font-size: 20px;
+      font-size: 24px;
       font-weight: bold;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
   }
@@ -45,8 +45,8 @@
     gap: 15px;
     
     .icon {
-      width: 40px;
-      height: 40px;
+      width: 45px;
+      height: 45px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -54,7 +54,7 @@
       border-radius: 50%;
       cursor: pointer;
       transition: all 0.3s ease;
-      font-size: 18px;
+      font-size: 20px;
       
       &:hover {
         background: rgba(255, 255, 255, 0.2);
@@ -66,7 +66,7 @@
 
 // Arama çubuğu
 .search-container {
-  padding: 15px 20px;
+  padding: 20px 25px;
   background: rgba(255, 255, 255, 0.05);
   
   .search-bar {
@@ -75,8 +75,8 @@
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    padding: 12px 15px;
-    max-width: 600px;
+    padding: 15px 20px;
+    max-width: 700px;
     margin: 0 auto;
     
     .search-icon {
@@ -105,7 +105,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 20px 25px;
   background: rgba(255, 255, 255, 0.05);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -116,12 +116,13 @@
   gap: 5px;
   
   .nav-tab {
-    padding: 10px 20px;
+    padding: 12px 24px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 16px;
     position: relative;
     
     &:hover {

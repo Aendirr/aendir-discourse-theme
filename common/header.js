@@ -166,10 +166,10 @@ export default {
                   <div class="topic-title">Forum Rank System - Stay Active, Level Up, Unlock Privileges!</div>
                   <div class="topic-meta">General • Forum sistemi hakkında</div>
                 </div>
-                <div class="topic-stats">
-                  <div class="topic-count">5</div>
-                  <div class="topic-time">29 dk</div>
-                </div>
+                            <div class="topic-stats">
+              <div class="topic-count">5</div>
+              <div class="topic-time">41 dk</div>
+            </div>
               </div>
             </div>
             
@@ -180,10 +180,10 @@ export default {
                   <div class="topic-title">Yeni üyeler için hoş geldin rehberi</div>
                   <div class="topic-meta">General • Yeni başlayanlar</div>
                 </div>
-                <div class="topic-stats">
-                  <div class="topic-count">2</div>
-                  <div class="topic-time">5 dk</div>
-                </div>
+                            <div class="topic-stats">
+              <div class="topic-count">2</div>
+              <div class="topic-time">17 dk</div>
+            </div>
               </div>
             </div>
             
@@ -194,10 +194,10 @@ export default {
                   <div class="topic-title">Casino stratejileri ve ipuçları</div>
                   <div class="topic-meta">Casino • Strateji paylaşımı</div>
                 </div>
-                <div class="topic-stats">
-                  <div class="topic-count">8</div>
-                  <div class="topic-time">1 saat</div>
-                </div>
+                            <div class="topic-stats">
+              <div class="topic-count">1</div>
+              <div class="topic-time">5g</div>
+            </div>
               </div>
             </div>
             
@@ -208,16 +208,16 @@ export default {
                   <div class="topic-title">Bu hafta sonu spor bahisleri</div>
                   <div class="topic-meta">Sports • Bahis analizi</div>
                 </div>
-                <div class="topic-stats">
-                  <div class="topic-count">12</div>
-                  <div class="topic-time">20 May</div>
-                </div>
+                            <div class="topic-stats">
+              <div class="topic-count">2</div>
+              <div class="topic-time">20 May</div>
+            </div>
               </div>
             </div>
             
             <div class="topic-card">
               <div class="topic-content">
-                <div class="topic-avatar blue">M</div>
+                <div class="topic-avatar green">M</div>
                 <div class="topic-info">
                   <div class="topic-title">Topluluk kuralları ve yönergeler</div>
                   <div class="topic-meta">Staff • Kurallar</div>
@@ -225,6 +225,20 @@ export default {
                 <div class="topic-stats">
                   <div class="topic-count">3</div>
                   <div class="topic-time">2 gün</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="topic-card">
+              <div class="topic-content">
+                <div class="topic-avatar cyan">S</div>
+                <div class="topic-info">
+                  <div class="topic-title">Yerel etkinlikler ve buluşmalar</div>
+                  <div class="topic-meta">Local • Etkinlikler</div>
+                </div>
+                <div class="topic-stats">
+                  <div class="topic-count">4</div>
+                  <div class="topic-time">1 hafta</div>
                 </div>
               </div>
             </div>
