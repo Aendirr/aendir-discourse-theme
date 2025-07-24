@@ -1,46 +1,28 @@
 {
-  "name": "Aendir Community Theme",
-  "about": "A dark-themed Discourse theme inspired by Stake Community design with modern gaming aesthetics",
-  "license": "MIT",
-  "version": "1.0.0",
-  "authors": "Aendir",
-  "theme_version": 2,
-  "minimum_discourse_version": "2.7.0",
-  "maximum_discourse_version": null,
-  "assets": {
-    "mrgamb-logo": "assets/mrgamb-logo.png",
-    "slot-machine": "assets/slot-machine.png",
-    "fighter-celebration": "assets/fighter-celebration.png",
-    "gold-coins": "assets/gold-coins.png"
-  },
-  "common": {
-    "header": "common/header.html",
-    "header_scss": "common/header.scss",
-    "base_scss": "common/base.scss",
-    "components_scss": "common/components.scss",
-    "layout": "common/layout.html",
-    "layout_scss": "common/layout.scss"
-  },
-  "javascripts": [
-    "common/header.js"
-  ],
+  "name": "Aendir Discourse Theme",
+  "about_url": "https://github.com/aendir/aendir-discourse-theme",
+  "license_url": "https://github.com/aendir/aendir-discourse-theme/blob/main/LICENSE",
   "color_schemes": {
-    "MRGambCommunity Purple": {
-      "primary": "780EDE",
-      "secondary": "1A1A2E",
-      "tertiary": "9A2FF0",
-      "quaternary": "B44FF8",
-      "header_background": "780EDE",
-      "header_primary": "FFFFFF",
-      "highlight": "9A2FF0",
-      "love": "FF6B6B",
-      "danger": "FF4757",
-      "success": "2ED573",
-      "warning": "FFA502"
+    "mint-light": {
+      "primary": "454545",
+      "secondary": "F6FBFC",
+      "tertiary": "4F8A7C",
+      "header_background": "ffffff",
+      "header_primary": "111111",
+      "selected": "e3efec",
+      "hover": "e3efec"
+    },
+    "mint-dark": {
+      "primary": "e0e0e0",
+      "secondary": "2d2d2d",
+      "tertiary": "4F8A7C",
+      "header_background": "202020",
+      "header_primary": "e0e0e0",
+      "highlight": "b2b235",
+      "selected": "1c302b",
+      "hover": "1c302b"
     }
   },
-  "modifiers": {
-    "serialize_topic_excerpts": true
-  },
-  "learn_more": "https://github.com/aendirr/aendir-discourse-theme"
-} 
+  "components": ["https://github.com/discourse/discourse-search-banner.git"],
+  "screenshots": ["screenshots/light.png", "screenshots/dark.png"]
+}

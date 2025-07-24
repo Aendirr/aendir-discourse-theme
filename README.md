@@ -1,138 +1,108 @@
-# MRGambCommunity Theme
+# Stake Community Forum - Modern Bahis Forumu
 
-MRGambCommunity sitesinin tasarımını birebir taklit eden modern ve şık bir Discourse teması.
-
-## 🎨 Tasarım Özellikleri
-
-- **Mor Renk Teması**: #780ede ana renk ile modern görünüm
-- **Koyu Tema**: Göz yormayan koyu arka plan
-- **Responsive Tasarım**: Tüm cihazlarda mükemmel görünüm
-- **Modern UI/UX**: Stake Community sitesinin tasarım dilini yansıtan arayüz
-- **Özel Bileşenler**: Promosyon bannerları, istatistik kartları ve daha fazlası
-
-## 🚀 Kurulum
-
-### 1. GitHub'dan İndirme
-
-1. Bu repository'yi GitHub'a yükleyin
-2. Discourse admin panelinde "Themes & components" bölümüne gidin
-3. "Upload" butonuna tıklayın
-4. "From Git repository" sekmesini seçin
-5. Repository URL'sini girin: `https://github.com/aendirr/aendir-discourse-theme`
-6. "Upload" butonuna tıklayın
-
-### 2. Manuel Kurulum
-
-1. Bu repository'yi indirin
-2. ZIP dosyası oluşturun
-3. Discourse admin panelinde "Upload" butonuna tıklayın
-4. "From your device" sekmesini seçin
-5. ZIP dosyasını yükleyin
-
-## 📁 Dosya Yapısı
-
-```
-mrgambcommunity-theme/
-├── about.json              # Tema bilgileri ve ayarları
-├── common/
-│   ├── base.scss           # Temel stiller
-│   ├── header.scss         # Header tasarımı
-│   └── components.scss     # Özel bileşenler
-├── assets/
-│   ├── mrgamb-logo.png     # MRGambCommunity logosu
-│   ├── slot-machine.png    # Slot makinesi görseli
-│   ├── fighter-celebration.png # Sporcu görseli
-│   └── gold-coins.png      # Altın paralar görseli
-└── README.md               # Bu dosya
-```
+Bu proje, Stake Community Forum'un birebir klonunu Svelte ile oluşturmuş modern bir bahis ve kumar forumudur.
 
 ## 🎯 Özellikler
 
-### Renk Paleti
-- **Ana Renk**: #780ede (Mor)
-- **Açık Mor**: #9a2ff0
-- **Koyu Mor**: #5a0a9e
-- **Arka Plan**: #1a1a2e
-- **Vurgu**: #00d4ff (Cyan)
+- **Modern Tasarım**: Stake Community Forum'un birebir aynısı
+- **Responsive Layout**: Tüm cihazlarda mükemmel görünüm
+- **Swiper Carousel**: Sağ sidebar'da 3 adet altalta görsel ile swiper
+- **Forum Bölümleri**: Recent Discussions, Promotions, Stake kategorileri
+- **İstatistikler**: Forum ve üye istatistikleri
+- **Dark Theme**: Modern koyu tema tasarımı
 
-### Özel Bileşenler
-- **Promosyon Bannerları**: Gradient arka planlı modern bannerlar
-- **İstatistik Kartları**: Forum ve üye istatistikleri
-- **Kategori İkonları**: Renkli kategori simgeleri
-- **Özel Navigasyon**: MRGambCommunity tarzı navigasyon menüsü
+## 🚀 Kurulum
 
-### Responsive Tasarım
-- Mobil cihazlarda optimize edilmiş görünüm
-- Tablet ve desktop için özel düzenlemeler
-- Esnek grid sistemi
+```bash
+# Bağımlılıkları yükle
+npm install
 
-## 🔧 Özelleştirme
+# Geliştirme sunucusunu başlat
+npm run dev
 
-### Renk Değiştirme
-`common/base.scss` dosyasındaki CSS değişkenlerini düzenleyerek renkleri değiştirebilirsiniz:
+# Production build
+npm run build
 
-```scss
-:root {
-  --mrgamb-primary: #780ede;
-  --mrgamb-primary-light: #9a2ff0;
-  --mrgamb-secondary: #1a1a2e;
-  // ... diğer renkler
-}
+# Preview production build
+npm run preview
 ```
 
-### Görsel Ekleme
-`assets/` klasörüne yeni görseller ekleyebilir ve `about.json` dosyasında tanımlayabilirsiniz.
+## 📁 Proje Yapısı
 
-## 📱 Desteklenen Özellikler
+```
+src/
+├── lib/
+│   └── components/
+│       ├── Header.svelte          # Üst menü
+│       ├── LeftSidebar.svelte     # Sol sidebar
+│       ├── MainContent.svelte     # Ana içerik
+│       ├── RightSidebar.svelte    # Sağ sidebar (Swiper)
+│       ├── ForumSection.svelte    # Forum tartışmaları
+│       ├── PromotionsSection.svelte # Promosyonlar
+│       └── StakeSection.svelte    # Stake kategorileri
+├── routes/
+│   ├── +layout.svelte
+│   └── +page.svelte
+└── app.css                        # Global stiller
+```
 
-- ✅ Koyu tema
-- ✅ Responsive tasarım
-- ✅ Modern UI bileşenleri
-- ✅ Özel renk paleti
-- ✅ MRGambCommunity tasarım dili
-- ✅ Mobil uyumlu
-- ✅ Hızlı yükleme
-- ✅ SEO dostu
+## 🎨 Tasarım Özellikleri
 
-## 🐛 Sorun Giderme
+### Renk Paleti
+- **Ana Arka Plan**: `#1A202C` (Koyu mavi-gri)
+- **Sidebar Arka Plan**: `#171923` (Daha koyu gri)
+- **Kart Arka Plan**: `#2D3748` (Orta gri)
+- **Vurgu Rengi**: `#48BB78` (Yeşil)
+- **Mavi Vurgu**: `#63B3ED` (Açık mavi)
+- **Turuncu Vurgu**: `#ED8936` (Turuncu)
 
-### Tema Yüklenmiyor
-1. ZIP dosyasının doğru oluşturulduğundan emin olun
-2. `about.json` dosyasının geçerli JSON formatında olduğunu kontrol edin
-3. Discourse sürümünüzün uyumlu olduğunu kontrol edin
+### Swiper Carousel
+Sağ sidebar'da 3 adet görsel:
+1. **Video Banner**: "TO 16 FREE GAMES" slot oyunları
+2. **İstatistikler**: Wagered/Paid değerleri
+3. **Challenge Banner**: "UP FOR A CHALLENGE?" dövüş eldivenleri
 
-### Görseller Görünmüyor
-1. `assets/` klasöründeki görsellerin mevcut olduğunu kontrol edin
-2. Dosya isimlerinin `about.json`'da tanımlanan isimlerle eşleştiğini kontrol edin
+### Forum Bölümleri
+- **Recent Discussions**: Son tartışmalar
+- **Promotions**: Promosyon kategorileri
+- **Stake**: Stake özel kategorileri
 
-### Stil Sorunları
-1. Tarayıcı önbelleğini temizleyin
-2. Discourse'u yeniden başlatın
-3. Tema dosyalarının doğru yüklendiğini kontrol edin
+## 🛠️ Teknolojiler
 
-## 🤝 Katkıda Bulunma
+- **Svelte 4**: Modern frontend framework
+- **SvelteKit**: Full-stack framework
+- **Swiper**: Carousel/slider kütüphanesi
+- **Lucide Icons**: Modern ikon seti
+- **Vite**: Hızlı build tool
 
-1. Bu repository'yi fork edin
-2. Yeni bir branch oluşturun (`git checkout -b feature/yeni-ozellik`)
-3. Değişikliklerinizi commit edin (`git commit -am 'Yeni özellik eklendi'`)
-4. Branch'inizi push edin (`git push origin feature/yeni-ozellik`)
-5. Pull Request oluşturun
+## 📱 Responsive Tasarım
+
+Proje tüm cihazlarda mükemmel görünüm sağlar:
+- Desktop (1400px+)
+- Tablet (768px - 1399px)
+- Mobile (320px - 767px)
+
+## 🎯 Hedef Kitle
+
+Bu forum özellikle şu kullanıcılar için tasarlanmıştır:
+- Bahis ve kumar tutkunları
+- Spor bahisleri oyuncuları
+- Casino oyuncuları
+- Poker oyuncuları
+- Topluluk üyeleri
 
 ## 📄 Lisans
 
-Bu tema MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakın.
+Bu proje MIT lisansı altında lisanslanmıştır.
 
-## 🙏 Teşekkürler
+## 🤝 Katkıda Bulunma
 
-- [MRGambCommunity](https://mrgambcommunity.com) - Tasarım ilhamı için
-- [Discourse](https://discourse.org) - Harika forum platformu için
+1. Fork yapın
+2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Commit yapın (`git commit -m 'Add amazing feature'`)
+4. Push yapın (`git push origin feature/amazing-feature`)
+5. Pull Request oluşturun
 
 ## 📞 İletişim
 
-Sorularınız veya önerileriniz için:
-- GitHub Issues: [Repository Issues](https://github.com/kullaniciadi/mrgambcommunity-theme/issues)
-- Email: your-email@example.com
-
----
-
-**Not**: Bu tema MRGambCommunity sitesinin tasarımını taklit etmek için oluşturulmuştur. Ticari kullanım için gerekli izinleri aldığınızdan emin olun. 
+Proje hakkında sorularınız için issue açabilirsiniz.
