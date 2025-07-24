@@ -76,6 +76,53 @@ body {
   opacity: 0 !important;
 }
 
+// Tüm mor header'ları gizle
+[style*="background: #780ede"],
+[style*="background-color: #780ede"],
+[style*="background: purple"],
+[style*="background-color: purple"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+// MRGAMB yazısını içeren tüm elementleri gizle
+*:contains("MRGAMB"),
+*:contains("MRGamb"),
+*:contains("mrgamb") {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+// Crown emoji içeren elementleri gizle
+*:contains("👑") {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+// Tüm header benzeri elementleri gizle
+header,
+[role="banner"],
+.navbar,
+.navigation,
+.top-bar,
+.top-nav {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+// Mor renkli tüm elementleri gizle
+[style*="#780ede"],
+[style*="purple"],
+[style*="rgb(120, 14, 222)"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
 // Ana içerik alanını düzenle
 .list-controls {
   display: none; // Varsayılan kontrolleri gizle

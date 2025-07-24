@@ -30,6 +30,11 @@ export default {
       this.hideOldHeaders();
       this.addCustomHeader();
     });
+    
+    // Sürekli temizleme için interval
+    setInterval(() => {
+      this.hideOldHeaders();
+    }, 1000); // Her saniye kontrol et
   },
   
   hideOldHeaders() {
@@ -47,6 +52,32 @@ export default {
       oldLayout.style.display = 'none';
       oldLayout.style.visibility = 'hidden';
     }
+    
+    // MRGAMB yazısını içeren tüm elementleri gizle
+    const allElements = document.querySelectorAll('*');
+    allElements.forEach(element => {
+      if (element.textContent && element.textContent.includes('MRGAMB')) {
+        element.style.display = 'none';
+        element.style.visibility = 'hidden';
+        element.style.opacity = '0';
+      }
+      
+      // Crown emoji içeren elementleri gizle
+      if (element.textContent && element.textContent.includes('👑')) {
+        element.style.display = 'none';
+        element.style.visibility = 'hidden';
+        element.style.opacity = '0';
+      }
+      
+      // Mor arka planlı elementleri gizle
+      const computedStyle = window.getComputedStyle(element);
+      if (computedStyle.backgroundColor.includes('rgb(120, 14, 222)') || 
+          computedStyle.backgroundColor.includes('purple')) {
+        element.style.display = 'none';
+        element.style.visibility = 'hidden';
+        element.style.opacity = '0';
+      }
+    });
   },
   
   addCustomHeader() {
