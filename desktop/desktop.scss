@@ -12,7 +12,7 @@ body:not(.navigation-categories, .navigation-topics) #main-outlet {
 
 .boxed {
   &.white {
-    @include mint-card-bg;
+    background-color: transparent;
   }
 }
 
